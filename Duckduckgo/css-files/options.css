@@ -1,0 +1,60 @@
+.background-shape {
+  margin-top: 80px;
+  background-color: #e37151;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  
+}
+
+.options .block {
+  width: 340px;
+  height: 340px;
+  background-color: white;
+  margin: 10px;
+  margin-top: -70px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  overflow: visible;
+  text-align: center;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.21);
+}
+
+.block p {
+  font-size: 15px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+.options a {
+  text-decoration: none;
+  color: #678fff;
+  font-weight: bolder;
+}
+
+.text {
+  display: block;
+  text-align: center;
+  color: white;
+  margin-top: 80px;
+}
+
+.text * {
+  margin: 20px;
+}
+
+.text h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.text p {
+  font-size: 1.2rem;
+  line-height: 25px;
+}

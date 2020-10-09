@@ -1,0 +1,49 @@
+header img {
+  width: 150px;
+  height: 150px;
+}
+
+.options img {
+  padding-bottom: 20px;
+  height: 90px;
+  transform: scale(1.05)
+}
+
+.cropped-image {
+  max-height: 310px;
+  overflow: hidden;
+  margin: 0;
+  background-color: #e37151;
+}
+
+.cropped-image img {
+  margin-top: 50px;
+  margin-bottom: 0px;
+  width: 700px; 
+}
+
+.toggle-menu i {
+  transform: scale(0.9);
+  padding: 5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+}
+
+.toggle-menu .fa-twitter {
+  background-color: #08a0e9;
+  padding-top: 6px;
+}
+
+.toggle-menu .fa-reddit-alien {
+  background-color: #ff5700;
+}
+
+.toggle-menu .fa-comment-alt {
+  background-color: #8249e4;
+  padding-top: 6.5px;
+}
+
+.toggle-menu .fa-envelope {
+  background-color: #fba42d;
+}

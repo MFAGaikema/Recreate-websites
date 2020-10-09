@@ -1,0 +1,125 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+  margin-right: 80px;
+  margin-top: 30px;
+  color: #aaaaaa;
+  float: right;
+}
+
+.social-media {
+  color: #aaaaaa;
+}
+
+.social-media:hover {
+  color: grey;
+}
+
+.fa-bars, .social-media {
+  padding: 10px;
+  box-sizing: unset;
+  cursor: pointer;
+}
+
+.fa-bars:hover {
+  background-color: darkslategrey;
+  color: white;
+  border-radius: 5px;
+}
+
+/*uitklappen social media menu*/
+
+.toggle-menu {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+.toggle-menu ul{
+  box-shadow: 0px 6px 28px -2px rgba(0,0,0,0.27);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  position: absolute;
+  top: 60px;
+  right: 160px;
+  list-style-type: none;
+}
+
+.toggle-menu li {
+  padding: 5px;
+}
+
+.toggle-menu a {
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.toggle-menu a:hover {
+  text-decoration: underline;
+}
+
+.toggle-menu span {
+  padding-left: 5px;
+}
+
+/*uitklappen navigatiemenu*/
+
+.nav-menu {
+  background-color: white;
+  padding: 25px;
+  position: fixed;
+  height: 100vh;
+  right: -220px;
+  border-left: 1px solid #4c4c4c;
+  transition: all 0.5s;
+}
+
+.appeared-menu {
+  right: 0;
+  
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin-bottom: 40px;
+}
+
+.nav-menu li {
+  margin: 10px 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #4c4c4c;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+.nav-menu h4 {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  color: #9aa09c;
+}
+
+.nav-menu span {
+  float: right;
+}
+
+.fa-times {
+  transform: scale(2);
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.fa-times:hover {
+  color: #7a807c
+}
+

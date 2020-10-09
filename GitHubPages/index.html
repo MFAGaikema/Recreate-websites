@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel='icon' href='/images/favicon.ico' type='image/x-icon' />
+  <script defer src="script.js"></script>
+  <script defer src="https://kit.fontawesome.com/d4e6b0151b.js" crossorigin="anonymous"></script>
+  <title>GitHub Pages</title>
+</head>
+<body>
+  <div class="top-part">
+    <a href="#">
+      <header>
+        <h2><img src="images/githubblack.png"></h2>
+        <a href="help"><p>Pages Help</p></a>
+      </header>
+    </a>
+    <div class="intro">
+      <h1>Websites for you and your projects.</h1>
+      <p>Hosted directly from your <a href="#">GitHub repository</a>. Just edit, push, and your changes are live.</p>
+    </div>
+    <div class="carousel">
+    </div>
+  </div>
+  <main>
+    <div class="about">
+      <h1>What is GitHub Pages?</h1>
+      <iframe 
+        width="853" 
+        height="480" 
+        src="https://www.youtube.com/embed/2MsN8gpT6jY" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="project-path">
+      <h1>Ready to get started? Build your own site<br> from scratch or generate one for your<br> project.</h1>
+      <p>You get one site per GitHub account and organization,<br> and unlimited project sites. Let‘s get started.</p>
+      <div class="choices first-choice">
+        <button class="user-organization-site site active">User or organization site</button>
+        <button class="project-site site not-active">Project site</button>
+      </div>
+      <ul class="user-organization-site site-list">
+        <li class="block create-repo">
+          <div class="icon">1</div>
+          <div class="repo-text">
+            <h2>Create a repository</h2>
+            <p>Head over to <a href="#">GitHub</a> and <a href="#">create a new repository</a> named <i>username</i>.github.io, where <i>username</i> is your username (or organization name) on GitHub.</p>
+            <p class="small">If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right.</p>
+          </div>
+          <img class="repo" src="images/createrepo.png"/>
+        </li>
+        <li class="block padding">
+          <div class="icon">?</div>
+          <h2>What git client are you using?</h2>
+          <div class="choices">
+            <button class="terminal active git-client">A terminal</button>
+            <button class="desktop not-active git-client">GitHub Desktop</button>
+            <button class="unknown not-active git-client">I don't know</button>
+          </div>
+        </li>
+
+        <ul class="git-client-container">
+          <div class="terminal git">
+            <li class="block padding" >
+              <div class="icon">2</div>
+              <h2>Clone the repository</h2>
+              <p>Go to the folder where you want to store your project, and clone the new repository:</p>
+              <img src="images/clonerepo.png"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">3</div>
+              <h2>Hello World</h2>
+              <p>Enter the project folder and add an index.html file:</p>
+              <img src="images/helloworld.png"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">4</div>
+              <h2>Push it</h2>
+              <p>Add, commit, and push your changes:</p>
+              <img src="images/pushit.png"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">5</div>
+              <h2>…and you're done!</h2>
+              <p>Fire up a browser and go to <b>https://<i>username</i>.github.io</b>.</p>
+              <i class="fas fa-check"></i>
+            </li> 
+          </div>
+          <div class="desktop git hidden">
+            <li class="block create-repo">
+              <div class="icon">2</div>
+              <div class="repo-text">
+                <h2>Clone the repository</h2>
+                <p>Click the "Set up in Desktop" button. When the GitHub desktop app opens, save the project.</p>
+                <p class="small">If the app doesn't open, launch it and clone the repository from the app.</p>
+              </div>
+              <img class="clone-repo-head" src="images/clonerepohead.png"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">3</div>
+              <h2>Create an index file</h2>
+              <p>Grab your favorite text editor and add an index.html file to your project:</p>
+              <img src="images/createindex.png"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">4</div>
+              <h2>Commit & publish</h2>
+              <p>Enter the repository, commit your changes, and press the publish button.</p>
+              <img class="demo-gif" src="images/desktop-demo@2x.gif"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">5</div>
+              <h2>…and you're done!</h2>
+              <p>Fire up a browser and go to <b>https://<i>username</i>.github.io</b>.</p>
+              <i class="fas fa-check"></i>
+            </li> 
+          </div>
+          <div class="unknown git hidden">
+            <li class="block no-padding-img">
+              <div class="icon">2</div>
+              <div class="repo-text">
+                <h2>Download GitHub Desktop</h2>
+                <p>GitHub Desktop is a great way to use Git and GitHub on macOS and Windows.</p>
+                <a href="#"><p>Download GitHub Desktop</p></a>
+              </div>
+              <img class="download-github" src="images/dashboard@2x.png"/>
+            </li>
+            <li class="block create-repo">
+              <div class="icon">3</div>
+              <div class="repo-text">
+                <h2>Clone the repository</h2>
+                <p>Click the "Set up in Desktop" button. When the GitHub desktop app opens, save the project.</p>
+                <p class="small">If the app doesn't open, launch it and clone the repository from the app.</p>
+              </div>
+              <img class="clone-repo-head" src="images/clonerepohead.png"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">4</div>
+              <h2>Create an index file</h2>
+              <p>Grab your favorite text editor and add an index.html file to your project:</p>
+              <img src="images/createindex.png"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">5</div>
+              <h2>Commit & publish</h2>
+              <p>Enter the repository, commit your changes, and press the publish button.</p>
+              <img class="demo-gif" src="images/desktop-demo@2x.gif"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">6</div>
+              <h2>…and you're done!</h2>
+              <p>Fire up a browser and go to <b>https://<i>username</i>.github.io</b>.</p>
+              <i class="fas fa-check"></i>
+            </li> 
+          </div>
+        </ul> 
+
+      </ul>
+      <ul class="project-site site-list hidden">
+        <li class="block padding">
+          <div class="icon">?</div>
+            <h2>Use a theme, or start from scratch?</h2>
+            <p>You have the option to start with one of the pre-built themes,<br>or to create a site from scratch.</p>
+            <div class="choices">
+              <button class="choose-theme active project-site-btns">Choose a theme</button>
+              <button class="scratch not-active project-site-btns">Start from scratch</button>
+            </div>
+        </li>
+        <ul class="project-site-container">
+          <div class="choose-theme project">
+            <li class="block padding">
+                <div class="icon">1</div>
+                <h2>Repository Settings</h2>
+                <p>Head over to <a href="#">GitHub.com</a> and create a new repository, or go to an existing one.<br>
+                  <b>Click on the Settings tab.</b></p>
+                <img src="images/repo-settings@2x.png"/>
+              </li>
+              <li class="block padding">
+                <div class="icon">2</div>
+                <h2>Theme chooser</h2>
+                <p>Scroll down to the <b>GitHub Pages</b> section. Press <b>Choose a theme</b>.</p>
+                <img src="images/launch-theme-chooser@2x.png"/>
+              </li>
+              <li class="block padding no-padding-img">
+                <div class="icon">3</div>
+                <h2>Pick a theme</h2>
+                <p>Choose one of the themes from the carousel at the top.<br>
+                  When you're done, click <b>Select theme</b> on the right.</p>
+                <img class="no-margin-img"src="images/theme-chooser@2x.png"/>
+              </li>
+              <li class="block padding no-padding-img">
+                <div class="icon">4</div>
+                <h2>Edit content</h2>
+                <p>Use the editor to add content to your site.</p>
+                <img class="no-margin-img" src="images/code-editor@2x.png"/>
+              </li>
+              <li class="block padding no-padding-img">
+                <div class="icon">5</div>
+                <h2>Commit</h2>
+                <p>Enter a commit comment and click on <b>Commit changes</b> below the editor.</p>
+                <img class="no-margin-img" src="images/commit-edits@2x.png"/>
+              </li>
+              <li class="block padding">
+                <div class="icon">6</div>
+                <h2>…and you're done!</h2>
+                <p>Fire up a browser and go to <b>https://<i>username</i>.github.io/<i>repository</i></b>.</p>
+                <i class="fas fa-check"></i>
+              </li> 
+          </div>
+          <div class="scratch project hidden">
+            <li class="block padding">
+              <div class="icon">1</div>
+              <h2>Create an index file</h2>
+              <p>Head over to <a href="#">GitHub.com</a> and <a href="#">create a new repository</a>, or go to an existing one.<br>
+                Click on the <b>Create new file</b> button.</p>
+              <img src="images/new-create-file@2x.png"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">2</div>
+              <h2>Hello World</h2>
+              <p>Name the file <code>index.html</code> and type some HTML content into the editor.</p>
+              <img src="images/new-index-html@2x.png"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">3</div>
+              <h2>Commit the file</h2>
+              <p>Scroll to the bottom of the page, write a commit message, and commit the new file.</p>
+              <img src="images/new-commit-file@2x.png"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">4</div>
+              <h2>Repository Settings</h2>
+              <p><b>Click on the Settings tab</b> and scroll down to the GitHub Pages section.<br>
+                Then select the <b>master branch</b> source and click on the <b>Save</b> button.</p>
+              <img src="images/source-setting@2x.png"/>
+            </li>
+            <li class="block padding">
+              <div class="icon">5</div>
+              <h2>…and you're done!</h2>
+              <p>Fire up a browser and go to <b>https://<i>username</i>.github.io/<i>repository</i></b>.</p>
+              <i class="fas fa-check"></i>
+            </li> 
+          </div>
+        </ul>
+      </ul>
+    </div>
+  </main>
+  <section>
+    <h1>Now that you’re up and running, here are<br> a few things you should know.</h1>
+    <ul class="extra-options">
+      <li class="jekyll">
+        <a href="#"><i class="fas fa-pencil-alt"></i></a>
+        <h2><a href="#">Blogging with Jekyll</a></h2>
+        <p class="small">Using <a href="#">Jekyll</a>, you can blog using beautiful Markdown syntax, and without having to deal with any databases. <a href="#">Learn how to set up Jekyll</a>.</p>
+      </li>
+      <li class="custom-urls">
+        <a href="#"><i class="fas fa-link"></i></a>
+        <h2><a href="#">Custom URLs</a></h2>
+        <p class="small">Want to use your own custom domain for a GitHub Pages site? Just create a file named CNAME and include your URL. <a href="#">Read more</a>.</p>
+      </li>
+      <li class="guides">
+        <a href="#"><i class="fas fa-book-open"></i></a>
+        <h2><a href="#">Guides</a></h2>
+        <p class="small">Learn how to create custom 404 pages, use submodules, and <a href="#">learn more about GitHub Pages</a>.</p>
+      </li>
+    </ul>
+  </section>
+  <footer>
+    <nav>
+      <p>
+        <span>&copy; 2020 GitHub</span>
+        <span><a href="#">Terms</a></span>
+        <span><a href="#">Privacy</a></span>
+        <span><a href="#">Security</a></span>
+        <span><a href="#">Contact</a></span>
+      </p>
+      <i class="fab fa-github"></i>
+      <p class="right-links">
+        <span><a href="#">Status</a></span>
+        <span><a href="#">API</a></span>
+        <span><a href="#">Training</a></span>
+        <span><a href="#">Shop</a></span>
+        <span><a href="#">Blog</a></span>
+        <span><a href="#">About</a></span>
+      </p>
+    </nav>
+  </footer>
+</body>
+</html>
