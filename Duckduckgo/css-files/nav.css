@@ -32,10 +32,12 @@
 
 .toggle-menu {
   opacity: 0;
+  visibility: hidden;
 }
 
 .visible {
   opacity: 1;
+  visibility: visible;
   transition: all 0.2s;
 }
 
@@ -77,11 +79,11 @@
   right: -220px;
   border-left: 1px solid #4c4c4c;
   transition: all 0.5s;
+  z-index: 2;
 }
 
 .appeared-menu {
   right: 0;
-  
 }
 
 .nav-menu ul {

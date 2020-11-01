@@ -1,26 +1,26 @@
-.main-info {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main-info h1 {
+main h1 {
   padding: 10px;
 }
 
-.main-info p {
+main p {
   padding: 5px;
 }
 
-.main-info a {
+main a {
   text-decoration: none;
   color: black;
 }
 
-.main-info :nth-child(2) {
+main :nth-child(2) {
   font-size: 15px;
 }
 
-.main-info :last-child {
+main :last-child {
   margin-top: 20px;
   font-weight: bolder;
 }

@@ -1,5 +1,4 @@
 //uitklappen social media
-
 const speakerBtn = document.querySelector(".social-media");
 const dropdownMenu = document.querySelector(".toggle-menu");
 
@@ -22,14 +21,17 @@ navBtn.addEventListener("click", navMenuAppear);
 //terugklappen navigatie menu
 const xBtn = document.querySelector(".fa-times");
 
-const navMenuRollback = () => {
-  navMenu.classList.remove("appeared-menu");
+const menuRollback = (e) => {
+  if(e.target !== navBtn) {
+    if (!e.target.closest('.nav-menu') || e.target === xBtn) {
+      navMenu.classList.remove("appeared-menu");
+    };
+  }
 }
 
-xBtn.addEventListener("click", navMenuRollback)
+document.addEventListener('click', menuRollback)
 
 //verschijnen "leer meer"
-
 const learnBtn = document.querySelector(".learn-btn");
 const learnComment = document.querySelector(".learn-comment");
 

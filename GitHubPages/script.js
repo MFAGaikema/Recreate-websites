@@ -96,9 +96,7 @@ const blocks = Array.from(document.querySelectorAll(".block"));
 const slideUpBlocks = () => {
   blocks.forEach(block => {
     const slideInAt = window.scrollY + window.innerHeight - 50;
-
     const maxSlide = window.scrollY + window.innerHeight + block.height;
-
     const isShown = slideInAt > block.offsetTop || maxSlide < block.offsetTop;
 
     if(isShown) {
@@ -120,7 +118,24 @@ btns.forEach(btn => btn.addEventListener("click", refreshClasses));
 
 window.addEventListener("scroll", debounce(slideUpBlocks, 40));
 
+//fade in extra options
+const jekyll = document.querySelector(".jekyll");
+const customUrls = document.querySelector(".custom-urls");
+const guides = document.querySelector(".guides");
+const extraOptions = Array.from(document.querySelectorAll(".option"));
 
+const fadeInExtraOptions = () => {
+  extraOptions.forEach(option => {
+    const fadeInAt = window.scrollY + window.innerHeight - 50;
+    const fadesIn = fadeInAt > option.offsetTop;
 
+    if(fadesIn) {
+      option.classList.add("fade-in");
+    }
+  })
+
+}
+
+window.addEventListener("scroll", debounce(fadeInExtraOptions, 40))
 
 

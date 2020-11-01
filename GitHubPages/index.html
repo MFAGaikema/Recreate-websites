@@ -21,37 +21,48 @@
       <h1>Websites for you and your projects.</h1>
       <p>Hosted directly from your <a href="#">GitHub repository</a>. Just edit, push, and your changes are live.</p>
     </div>
-    <div class="carousel">
+    <div class="carousel-container">
+      <div class="carousel"></div>
+    </div>
+    
+    <div class="image-cache" style="display: none">
+      <img src="/images/jekyllrb.png">
+      <img src="/images/bootstrap.png">
+      <img src="/images/facebookdesign.png">
+      <img src="/images/corefx.png">
+      <img src="/images/yeoman.png">
     </div>
   </div>
   <main>
     <div class="about">
       <h1>What is GitHub Pages?</h1>
-      <iframe 
+      <div class="video-box">
+        <iframe 
         width="853" 
         height="480" 
         src="https://www.youtube.com/embed/2MsN8gpT6jY" 
         frameborder="0" 
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
-      </iframe>
+        </iframe>
+      </div>
     </div>
     <div class="project-path">
-      <h1>Ready to get started? Build your own site<br> from scratch or generate one for your<br> project.</h1>
-      <p>You get one site per GitHub account and organization,<br> and unlimited project sites. Let‘s get started.</p>
+      <h1>Ready to get started? Build your own site from scratch or generate one for your project.</h1>
+      <p id="start-project">You get one site per GitHub account and organization, and unlimited project sites. Let‘s get started.</p>
       <div class="choices first-choice">
         <button class="user-organization-site site active">User or organization site</button>
         <button class="project-site site not-active">Project site</button>
       </div>
       <ul class="user-organization-site site-list">
-        <li class="block create-repo">
+        <li class="block img-aside">
           <div class="icon">1</div>
           <div class="repo-text">
             <h2>Create a repository</h2>
             <p>Head over to <a href="#">GitHub</a> and <a href="#">create a new repository</a> named <i>username</i>.github.io, where <i>username</i> is your username (or organization name) on GitHub.</p>
             <p class="small">If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right.</p>
           </div>
-          <img class="repo" src="images/createrepo.png"/>
+          <img class="side-img left-border" src="images/createrepo.png"/>
         </li>
         <li class="block padding">
           <div class="icon">?</div>
@@ -74,7 +85,7 @@
             <li class="block padding">
               <div class="icon">3</div>
               <h2>Hello World</h2>
-              <p>Enter the project folder and add an index.html file:</p>
+              <p>Enter the project folder and add an <code>index.html</code> file:</p>
               <img src="images/helloworld.png"/>
             </li>
             <li class="block padding">
@@ -91,14 +102,14 @@
             </li> 
           </div>
           <div class="desktop git hidden">
-            <li class="block create-repo">
+            <li class="block img-aside">
               <div class="icon">2</div>
               <div class="repo-text">
                 <h2>Clone the repository</h2>
                 <p>Click the "Set up in Desktop" button. When the GitHub desktop app opens, save the project.</p>
                 <p class="small">If the app doesn't open, launch it and clone the repository from the app.</p>
               </div>
-              <img class="clone-repo-head" src="images/clonerepohead.png"/>
+              <img class="side-img clone-repohead-img" src="images/clonerepohead.png"/>
             </li>
             <li class="block padding">
               <div class="icon">3</div>
@@ -129,14 +140,14 @@
               </div>
               <img class="download-github" src="images/dashboard@2x.png"/>
             </li>
-            <li class="block create-repo">
+            <li class="block img-aside">
               <div class="icon">3</div>
               <div class="repo-text">
                 <h2>Clone the repository</h2>
                 <p>Click the "Set up in Desktop" button. When the GitHub desktop app opens, save the project.</p>
                 <p class="small">If the app doesn't open, launch it and clone the repository from the app.</p>
               </div>
-              <img class="clone-repo-head" src="images/clonerepohead.png"/>
+              <img class="side-img clone-repohead-img" src="images/clonerepohead.png"/>
             </li>
             <li class="block padding">
               <div class="icon">4</div>
@@ -248,46 +259,47 @@
         </ul>
       </ul>
     </div>
-  </main>
+  </main> 
   <section>
-    <h1>Now that you’re up and running, here are<br> a few things you should know.</h1>
+    <h1>Now that you’re up and running, here are a few things you should know.</h1>
     <ul class="extra-options">
-      <li class="jekyll">
+      <li class="option jekyll">
         <a href="#"><i class="fas fa-pencil-alt"></i></a>
         <h2><a href="#">Blogging with Jekyll</a></h2>
         <p class="small">Using <a href="#">Jekyll</a>, you can blog using beautiful Markdown syntax, and without having to deal with any databases. <a href="#">Learn how to set up Jekyll</a>.</p>
       </li>
-      <li class="custom-urls">
+      <li class="option custom-urls">
         <a href="#"><i class="fas fa-link"></i></a>
         <h2><a href="#">Custom URLs</a></h2>
         <p class="small">Want to use your own custom domain for a GitHub Pages site? Just create a file named CNAME and include your URL. <a href="#">Read more</a>.</p>
       </li>
-      <li class="guides">
+      <li class="option guides">
         <a href="#"><i class="fas fa-book-open"></i></a>
         <h2><a href="#">Guides</a></h2>
         <p class="small">Learn how to create custom 404 pages, use submodules, and <a href="#">learn more about GitHub Pages</a>.</p>
       </li>
     </ul>
+    <footer>
+      <nav>
+        <p>
+          <span>&copy; 2020 GitHub</span>
+          <span><a href="#">Terms</a></span>
+          <span><a href="#">Privacy</a></span>
+          <span><a href="#">Security</a></span>
+          <span><a href="#">Contact</a></span>
+        </p>
+        <i class="fab fa-github"></i>
+        <p class="right-links">
+          <span><a href="#">Status</a></span>
+          <span><a href="#">API</a></span>
+          <span><a href="#">Training</a></span>
+          <span><a href="#">Shop</a></span>
+          <span><a href="#">Blog</a></span>
+          <span><a href="#">About</a></span>
+        </p>
+      </nav>
+    </footer> 
   </section>
-  <footer>
-    <nav>
-      <p>
-        <span>&copy; 2020 GitHub</span>
-        <span><a href="#">Terms</a></span>
-        <span><a href="#">Privacy</a></span>
-        <span><a href="#">Security</a></span>
-        <span><a href="#">Contact</a></span>
-      </p>
-      <i class="fab fa-github"></i>
-      <p class="right-links">
-        <span><a href="#">Status</a></span>
-        <span><a href="#">API</a></span>
-        <span><a href="#">Training</a></span>
-        <span><a href="#">Shop</a></span>
-        <span><a href="#">Blog</a></span>
-        <span><a href="#">About</a></span>
-      </p>
-    </nav>
-  </footer>
+
 </body>
 </html>

@@ -2,7 +2,7 @@ button {
   cursor: pointer;
 }
 
-.main-info button, .text button {
+main button, .bottom-text button {
   padding: 15px;
   margin: 10px;
   border: none;
@@ -11,16 +11,16 @@ button {
   font-weight: bolder;
 }
 
-.main-info button {
+main button {
   background-color: #678fff;
 }
 
-.text button {
+.bottom-text button {
   background-color: #894431;
   font-size: 1rem;
   transition: all 0.1s ease
 }
 
-.text button:hover {
+.bottom-text button:hover {
   background-color: #532a1e
 }

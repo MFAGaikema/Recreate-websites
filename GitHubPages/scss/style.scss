@@ -10,8 +10,22 @@
   $button-radius: 5px;
   $vert-padding: 10px 20px;
   $block-border: 1px solid $greyscale-border;
-  $icon-size: 57px;
-  $icon-distance: -15px;
+  $icon-size-mob: 30px;
+  $icon-distance-mob: -10px;
+  $icon-size-tab: 40px;
+  $icon-distance-tab: -12px;
+  $icon-size-desk: 57px;
+  $icon-distance-desk: -15px;
+
+  @function width-height-ratio($width, $height-ratio) {
+    @return $width * $height-ratio;
+  }
+
+  $width-carousel-mob-tab: 95vw;
+  $width-carousel-desktop: 880px;
+
+  $width-youtube-vid-mob-tab: 95vw;
+  $width-youtube-vid-desktop: 853px;
 
 * {
   margin: 0;
@@ -20,10 +34,14 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
+html,body{
+  overflow-x: hidden;
+}
+
 h1 {
-  font-size: 48px;
+  font-size: 24px;
   font-weight: 100;
-  line-height: 60px;
+  line-height: 30px;
 }
 
 p {
@@ -73,8 +91,8 @@ code {
 
     h2 {
       font-family: 'Source Sans Pro', sans-serif;
-      margin: -105px 0;
-      transform: scale(0.33);
+      margin: -135px 0;
+      transform: scale(0.12);
 
     }
     
@@ -82,10 +100,10 @@ code {
       position: absolute;
       background-color: #333333;
       right: 0;
-      margin: 20px;
-      padding: 7px;
+      margin: 10px;
+      padding: 5px;
       font-weight: 700;
-      font-size: 12px;
+      font-size: 10px; 
       transition: all 0.3s;
     }
 
@@ -101,27 +119,37 @@ code {
 
 .intro {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 5px;
 
+  p {
+    padding: 0 0 10px 0; 
+  }
 }
 
+.carousel-container {
+   display: flex;
+   justify-content: center;
+ }
+
 .carousel {
-  margin-top: 40px;
   background-image: url(/images/jekyllrb.png);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-self: center;
-  width: 880px;
-  height: 400px;
-  margin: 40px 345px 0px 345px;
-  animation-name: turning;
+  width: $width-carousel-mob-tab; 
+  height: width-height-ratio($width-carousel-mob-tab, 0.45); 
+  margin: 10px 0 0 0; 
+  position: relative;
+  animation-name: fading;
   animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  transition: all 2s;
+  transition: background-image 2s;
 }
 
-@keyframes turning {
+@keyframes fading {
   2% {background-image: url(/images/bootstrap.png)}
   20% {background-image: url(/images/bootstrap.png)}
   22% {background-image: url(/images/corefx.png)}
@@ -132,7 +160,6 @@ code {
   80% {background-image: url(/images/yeoman.png)}
   82% {background-image: url(/images/jekyllrb.png)}
   100% {background-image: url(/images/jekyllrb.png)}
-  
 }
 
 main {
@@ -145,19 +172,33 @@ main {
 }
 
 .about {
+  width: 100vw;
+
   h1 {
-    margin-top: 90px;
-    margin-bottom: 45px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.video-box {
+  iframe {
+  width: $width-youtube-vid-mob-tab;
+  height: width-height-ratio(($width-youtube-vid-mob-tab), 0.5625);
+  padding: 5px;
   }
 }
 
 .project-path {
-  margin-top: 90px;
+  margin-top: 40px;
+
+  h1 {
+    padding: 5px;
+  }
 
   p {
     margin: 25px;
     font-size: 21px;
-    line-height: 38px;
+    line-height: 30px;
   }
 }
 
@@ -166,7 +207,7 @@ main {
   font-size: 0;
 
   button {
-    font-size: 15px;
+    font-size: 10px;
     outline: none;
     cursor: pointer;
     padding: $vert-padding;
@@ -175,7 +216,7 @@ main {
 }
 
 .first-choice {
-  margin: 30px 0 95px 0;
+  margin: 30px 0 50px 0;
 }
 
 .active {
@@ -217,8 +258,8 @@ main {
 .block {
   border: $block-border;
   background-color: white;
-  width: 980px;
-  margin: 70px 0;
+  width: 95vw;
+  margin: 50px auto;
   position: relative;
   list-style-type: none;
   border-radius: $button-radius;
@@ -227,31 +268,29 @@ main {
   transition: all 0.8s;
 
   h2 {
-    font-size: 30px;
+    font-size: 20px; //30px;
     font-weight: 300;
   }
 
   p {
-    font-size: 18px;
-    line-height: 30.6px;
+    font-size: 15px; //18px;
+    line-height: 20px; //30.6px;
     padding: 0;
   }
 
   img {
-    max-width: 700px;
+    max-width: 80vw; //700px;
   }
 
   .small {
-    font-size: 14px;
-  }
-  .repo {
-    max-width: 450px;
-    padding: 10px 20px;
-    border-left: $block-border;
+    font-size: 10px; //14px
+    margin-bottom: 10px;
   }
 
-  .clone-repo-head {
-    max-width: 440px;
+  .side-img {
+    padding-top: 10px;
+    margin-bottom: 50px;
+    border-top: $block-border;
   }
 
   .choices {
@@ -259,13 +298,13 @@ main {
   }
 
   .demo-gif {
-    box-shadow: 0px 30px 90px -3px rgba(0,0,0,0.63);
-    max-width: 850px;
-    margin-bottom: 10px;
+    box-shadow: 3px 3px 34px -6px rgba(0,0,0,0.75); //0px 30px 90px -3px rgba(0,0,0,0.63);
+    max-width: 80vw; //850px;
+    margin: 15px 15px 0 15px; //margin-bottom: 10px
   }
 
   .download-github {
-    max-width: 900px;
+    max-width: 80vw; //900px;
     margin-bottom: 0;
     margin-top: -30px;
   }
@@ -277,21 +316,17 @@ main {
   transform: translateY(0)
 }
 
-.create-repo {
-  display: flex;
-}
-
 .icon {
   position: absolute;
-  top: $icon-distance;
-  left: $icon-distance;
-  width: $icon-size;
-  height: $icon-size;
+  top: $icon-distance-mob;
+  left: $icon-distance-mob;
+  width: $icon-size-mob;
+  height: $icon-size-mob;
   border-radius: 50%;
   background-color: $background-blue;
   color: white;
-  padding-top: 12px;
-  font-size: 30px;
+  padding-top: 6px; //12px
+  font-size: 18px; //30px
 }
 
 .repo-text {
@@ -305,7 +340,7 @@ main {
 }
 
 .padding {
-  padding: 30px 10px 50px 10px;
+  padding: 30px 10px 40px 10px;
 
   h2 {
     padding: 10px;
@@ -339,14 +374,18 @@ main {
 /*section*/
 section {
   text-align: center;
-  margin: 100px 300px 30px 300px;
+  //margin: 100px 300px 30px 300px; normaal wel
   color: $text-main-footer;
+
+  h1 {
+    margin-top: 20px;
+  }
 }
 
 .extra-options {
-  display: flex;
+  //display: flex; normaal wel
   list-style-type: none;
-  padding: 100px 0;
+  padding: 50px 0 20px; //100px 0;
   border-bottom: 1px solid $greyscale-border;
 
   h2 {
@@ -362,16 +401,31 @@ section {
     padding: 10px 0;
   }
 
+  li {
+    padding: 0 10px; //normaal niks
+  }
   li:nth-of-type(2) {
-    padding: 0 20px;
+    //padding: 0 20px;
+    padding: 20px 10px;
+  }
+
+  .option {
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  .fade-in {
+    opacity: 1;
   }
 }
+
+
 
 /*footer*/
 nav {
   display: flex;
-  position: relative;
-  margin: 0 300px 20px 300px;
+  flex-direction: column;
+  align-items: center;
 
   p {
     font-size: 12px;
@@ -379,17 +433,9 @@ nav {
     color: #777777;
   }
 
-  .right-links {
-    position: absolute;
-    right: 0;
-  }
-
   i {
     align-self: center;
     font-size: 24px;
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
     color: #cccccc;
   }
 
@@ -403,6 +449,313 @@ nav {
 
   span:last-of-type {
     padding-right: 0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .top-part {
+    header {
+      h2 {
+      transform: scale(0.22);
+      margin: -120px 0;
+      }
+    }
+  }
+
+  .intro {
+    p {
+      padding: 10px 0;
+    }
+  }
+
+  .about {
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+
+  .video-box {
+    iframe {
+      padding: 30px 40px;
+    }
+  }
+
+  .first-choice {
+    margin-bottom: 60px; 
+  }
+
+  .choices {
+    button {
+      font-size: 12px;
+    }
+  }
+
+  .block {
+    // margin: 50px 10px 50px 15px;
+
+    .small {
+      font-size: 12px;
+    }
+  }
+
+  .icon {
+    top: $icon-distance-tab;
+    left: $icon-distance-tab;
+    width: $icon-size-tab;
+    height: $icon-size-tab;
+    padding-top: 9px;
+    font-size: 20px;
+  }
+
+  nav {
+    span {
+      padding: 0 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .top-part {
+    header {
+      p {
+        margin: 15px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .choices {
+    button {
+      font-size: 15px;
+    }
+  }
+
+  .video-box {
+    iframe {
+      padding: 20px 60px;
+    }
+  }
+
+  .img-aside {
+    display: flex;
+  }
+
+  .block {
+    .repo-text {
+      border-right: $block-border;
+    }
+
+    .side-img {
+      max-width: 440px;
+      border-top: none;
+      margin-top: 20px;
+      padding-top: 0;
+    }
+
+    .clone-repohead-img {
+      margin: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  section {
+    margin: 50px 100px 30px 100px;
+  }
+
+  nav {
+    flex-direction: row;
+    position: relative;
+  
+    .right-links {
+      position: absolute;
+      right: 0;
+    }
+  
+    i {
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+    }
+    span {
+      padding: 0 2px;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 48px;
+    font-weight: 100;
+    line-height: 60px;
+  }
+
+  .top-part {
+    header {
+      h2 {
+        font-family: 'Source Sans Pro', sans-serif;
+        margin: -105px 0;
+        transform: scale(0.33);
+      }
+      
+      p {
+        margin: 20px;
+        padding: 7px;
+        font-weight: 700;
+        font-size: 12px;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .intro {
+    text-align: center;
+    margin-top: 10px;
+  
+    p {
+      padding: 10px;
+      font-size: 18px;
+    }
+  }
+
+  .carousel {
+    margin-top: 50px;
+    width: $width-carousel-desktop;
+    height: width-height-ratio($width-carousel-desktop, 0.45);
+  }
+
+  .about { 
+    h1 {
+      margin-top: 90px;
+    }
+  }
+
+  .video-box {
+    iframe {
+      width: $width-youtube-vid-desktop;
+      height: width-height-ratio($width-youtube-vid-desktop, 0.5625)
+    }
+  }
+
+  .project-path {  
+    h1 {
+      padding: 0 350px;
+    }
+  
+    p {
+      line-height: 36px;
+      padding-top: 0;
+      padding-bottom: 10px;
+    }
+
+    #start-project {
+      width: 550px;
+      margin: auto;
+      margin-top: 20px;
+    }
+  }
+
+  .first-choice {
+    margin-bottom: 70px;
+  }
+
+  .block {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+    margin: 70px auto;
+
+    h2 {
+      font-size: 30px;
+    }
+  
+    p {
+      font-size: 18px;
+      line-height: 30.6px;
+    }
+
+    img {
+      width: 44vw;
+    }
+
+    .repo-text {
+      p {
+        padding: 0;
+      }
+    }
+
+    .small {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .left-border {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    .icon {
+      top: $icon-distance-desk;
+      left: $icon-distance-desk;
+      width: $icon-size-desk;
+      height: $icon-size-desk;
+      padding-top: 12px;
+      font-size: 30px;
+    }
+  }
+
+  .padding {
+    padding: 30px 10px 60px 10px;
+  }
+
+  .no-padding-img {
+    padding-bottom: 0;
+  }
+  
+  .no-margin-img {
+    margin-bottom: -3px;
+  }
+
+  section {
+    margin-top: 90px;
+    margin-bottom: 30px;
+    margin: 90px auto 30px auto;
+    max-width: 980px;
+    
+
+    h1 {
+      margin-top: 0px;
+      padding: 0 50px;
+    }
+  }
+
+  .extra-options {
+    display: flex; 
+    padding: 90px 0;
+  
+    li {
+      padding: 0;
+    }
+    li:nth-of-type(2) {
+      padding: 0 20px;
+    }
+  
+    .custom-urls {
+      transition-delay: 0.2s;
+    }
+  
+    .guides {
+      transition-delay: 0.4s;
+    }
   }
 }
 
